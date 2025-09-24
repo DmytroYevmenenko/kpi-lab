@@ -4,11 +4,9 @@ const thArray = [11, "Red", true, 242, false, "White", false, -11313, "Black", 1
 
 const  fnArray = (arr) => {
     const counter = {};
-    for (const element of arr){
-        const type = typeof element;
-        const count = counter[type] || 0;
-        counter[type] = count + 1;
-
+    for (const val of arr){
+        const type = typeof val;
+        counter[type] = (counter[type] || 0) + 1;
     }
     return counter
 }
